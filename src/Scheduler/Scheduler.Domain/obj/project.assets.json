@@ -1,11 +1,89 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "FluentValidation/10.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {}
+        }
+      },
+      "MediatR/9.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/MediatR.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {}
+        }
+      },
+      "Scheduler.Domain.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "FluentValidation": "10.1.0",
+          "MediatR": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Scheduler.Domain.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Scheduler.Domain.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "FluentValidation/10.1.0": {
+      "sha512": "RxhhfY9IcEY2qUMYjoUxegInbuE5Bwll7dVLsXpiJf25g0ztmzUK+HHqtPcub1caPemhMJsC+NwjHei+NgAkvA==",
+      "type": "package",
+      "path": "fluentvalidation/10.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.10.1.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "MediatR/9.0.0": {
+      "sha512": "8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
+      "type": "package",
+      "path": "mediatr/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gradient_128x128.png",
+        "lib/net461/MediatR.dll",
+        "lib/net461/MediatR.xml",
+        "lib/netstandard2.0/MediatR.dll",
+        "lib/netstandard2.0/MediatR.xml",
+        "lib/netstandard2.1/MediatR.dll",
+        "lib/netstandard2.1/MediatR.xml",
+        "mediatr.9.0.0.nupkg.sha512",
+        "mediatr.nuspec"
+      ]
+    },
+    "Scheduler.Domain.Core/1.0.0": {
+      "type": "project",
+      "path": "../Scheduler.Domain.Core/Scheduler.Domain.Core.csproj",
+      "msbuildProject": "../Scheduler.Domain.Core/Scheduler.Domain.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "FluentValidation >= 10.1.0",
+      "Scheduler.Domain.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Beshoy\\.nuget\\packages\\": {},
@@ -41,7 +119,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj": {
+              "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -53,6 +135,12 @@
     "frameworks": {
       "net5.0": {
         "targetAlias": "net5.0",
+        "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[10.1.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

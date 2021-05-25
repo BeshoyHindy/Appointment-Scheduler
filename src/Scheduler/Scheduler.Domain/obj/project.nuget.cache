@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "1KV6m/ElvfQw+ymaA6PfB2GyPKQ4xzbN58LBBoB3E5ASJ3iEtuHxzFNMa85fRd0EFRZ1mtd5uCkdAOo2Fk/64w==",
+  "dgSpecHash": "OMsCYiZzCrkg/q69C761lfKvehyAklmS9OkWlfdXTos6jIoY1H1hmemTwcx2O5UlpuJwx5u/jH4oIBb68a9OBA==",
   "success": true,
   "projectFilePath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain\\Scheduler.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Beshoy\\.nuget\\packages\\fluentvalidation\\10.1.0\\fluentvalidation.10.1.0.nupkg.sha512",
+    "C:\\Users\\Beshoy\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
