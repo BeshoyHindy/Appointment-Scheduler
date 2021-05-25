@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  scheduler.service.api:
+    image: ${DOCKER_REGISTRY-}schedulerserviceapi
+    build:
+      context: .
+      dockerfile: Scheduler.Service.Api/Dockerfile
