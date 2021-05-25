@@ -1,0 +1,59 @@
+<div class="list row">
+    <div class="col-md-8">
+
+    </div>
+    <div class="col-md-6">
+        <h4>Appointments List</h4>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let appointment of appointments; let i = index"
+                [class.active]="i == currentIndex" (click)="setActiveAppointment(appointment, i)">
+                {{ appointment.name }}
+            </li>
+        </ul>
+
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="currentAppointment">
+            <h4>Appointment</h4>
+            <div>
+                <label><strong>Name:</strong></label> {{ currentAppointment.name }}
+            </div>
+            <div>
+                <label><strong>Email:</strong></label>
+                {{ currentAppointment.email }}
+            </div>
+            <div>
+                <label><strong>Phone Number:</strong></label>
+                {{ currentAppointment.phoneNumber }}
+            </div>
+
+            <div>
+                <label><strong>Start Time:</strong></label>
+                {{ currentAppointment.startTime }}
+            </div>
+
+            <div>
+                <label><strong>End Time:</strong></label>
+                {{ currentAppointment.endTime }}
+            </div>
+
+            <div>
+                <label><strong>Date:</strong></label>
+                {{ currentAppointment.date }}
+            </div>
+            <div>
+                <label><strong>Notes:</strong></label>
+                {{ currentAppointment.notes }}
+            </div>
+            <a class="btn btn-warning" routerLink="/appointments/{{ currentAppointment.id }}">
+                Edit
+            </a>
+        </div>
+
+
+        <div *ngIf="!currentAppointment">
+            <br />
+            <p>Please click on an Appointment...</p>
+        </div>
+    </div>
+</div>

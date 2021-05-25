@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Scheduler.Domain.Core.Data;
@@ -17,8 +18,12 @@ using Scheduler.Infra.Data.Mappings;
 namespace Scheduler.Infra.Data.Context
 {
 
-    public sealed class AppointmentDataContext : DbContext, IUnitOfWork
+    public class AppointmentDataContext : DbContext, IUnitOfWork
     {
+        public AppointmentDataContext()
+        {
+            
+        }
 
         private readonly IMediatorHandler _mediatorHandler;
 

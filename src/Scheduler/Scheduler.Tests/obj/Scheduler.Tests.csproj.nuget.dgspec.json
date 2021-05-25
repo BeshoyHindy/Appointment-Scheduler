@@ -4,14 +4,14 @@
     "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\Scheduler.Tests.csproj": {}
   },
   "projects": {
-    "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\Scheduler.Tests.csproj": {
+    "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\Scheduler.Tests.csproj",
-        "projectName": "Scheduler.Tests",
-        "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\Scheduler.Tests.csproj",
+        "projectUniqueName": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj",
+        "projectName": "Scheduler.Domain.Core",
+        "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj",
         "packagesPath": "C:\\Users\\Beshoy\\.nuget\\packages\\",
-        "outputPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\obj\\",
+        "outputPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -46,9 +46,260 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain\\Scheduler.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain\\Scheduler.Domain.csproj",
+        "projectName": "Scheduler.Domain",
+        "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain\\Scheduler.Domain.csproj",
+        "packagesPath": "C:\\Users\\Beshoy\\.nuget\\packages\\",
+        "outputPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Beshoy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj": {
+                "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Infra.Data\\Scheduler.Infra.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Infra.Data\\Scheduler.Infra.Data.csproj",
+        "projectName": "Scheduler.Infra.Data",
+        "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Infra.Data\\Scheduler.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\Beshoy\\.nuget\\packages\\",
+        "outputPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Infra.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Beshoy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj": {
+                "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain.Core\\Scheduler.Domain.Core.csproj"
+              },
+              "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain\\Scheduler.Domain.csproj": {
+                "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Domain\\Scheduler.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\Scheduler.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\Scheduler.Tests.csproj",
+        "projectName": "Scheduler.Tests",
+        "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\Scheduler.Tests.csproj",
+        "packagesPath": "C:\\Users\\Beshoy\\.nuget\\packages\\",
+        "outputPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Beshoy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Infra.Data\\Scheduler.Infra.Data.csproj": {
+                "projectPath": "C:\\SourceCode\\GtiHub\\MyAccount\\Appointment-Scheduler\\src\\Scheduler\\Scheduler.Infra.Data\\Scheduler.Infra.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.9.4, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.1, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

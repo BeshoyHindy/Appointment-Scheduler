@@ -1,0 +1,51 @@
+<div>
+    <div class="submit-form">
+        <div *ngIf="!submitted">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required [(ngModel)]="appointment.name" name="name" />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" required [(ngModel)]="appointment.email"
+                    name="email" />
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="appointment.phoneNumber"
+                    name="phoneNumber" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="startTime">Start Time</label>
+                <input type="datetime-local" class="form-control" id="startTime" required
+                    [(ngModel)]="appointment.startTime" name="startTime" />
+            </div>
+
+            <div class="form-group">
+                <label for="endTime">End Time</label>
+                <input type="datetime-local" class="form-control" id="endTime" required
+                    [(ngModel)]="appointment.endTime" name="endTime" />
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="datetime-local" class="form-control" id="date" required [(ngModel)]="appointment.date"
+                    name="date" />
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <input class="form-control" id="notes" required [(ngModel)]="appointment.notes" name="notes" />
+            </div>
+
+            <button (click)="saveAppointment()" class="btn btn-success">Submit</button>
+        </div>
+
+        <div *ngIf="submitted">
+            <h4>appointment was submitted successfully!</h4>
+            <button class="btn btn-success" (click)="newAppointment()">Add</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div>
+    <div *ngIf="currentAppointment.id" class="edit-form">
+        <h4>Appointment</h4>
+        <form>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required [(ngModel)]="currentAppointment.name" name="name" />
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="text" class="form-control" id="phoneNumber" required [(ngModel)]="currentAppointment.phoneNumber"
+                    name="phoneNumber" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="startTime">Start Time</label>
+                <input type="datetime-local" class="form-control" id="startTime" required
+                    [(ngModel)]="currentAppointment.startTime" name="startTime" />
+            </div>
+
+            <div class="form-group">
+                <label for="endTime">End Time</label>
+                <input type="datetime-local" class="form-control" id="endTime" required
+                    [(ngModel)]="currentAppointment.endTime" name="endTime" />
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="datetime-local" class="form-control" id="date" required [(ngModel)]="currentAppointment.date"
+                    name="date" />
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <input class="form-control" id="notes" required [(ngModel)]="currentAppointment.notes" name="notes" />
+            </div>
+
+        </form>
+
+        <button class="btn btn-danger" (click)="deleteAppointment()">
+            Delete
+        </button>
+
+        <button type="submit" class="btn btn-warning" (click)="updateAppointment()">
+            Update
+        </button>
+        <p>{{ message }}</p>
+    </div>
+
+    <div *ngIf="!currentAppointment.id">
+        <br />
+        <p>Cannot access this Appointment...</p>
+    </div>
+</div>

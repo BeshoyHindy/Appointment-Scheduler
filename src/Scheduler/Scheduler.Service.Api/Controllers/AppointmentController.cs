@@ -25,7 +25,7 @@ namespace Scheduler.Service.Api.Controllers
             return await _appointmentAppService.GetAll();
         }
 
-        [HttpGet("/{id:guid}")]
+        [HttpGet("{id:guid}")]
         public async Task<AppointmentViewModel> Get(Guid id)
         {
             return await _appointmentAppService.GetById(id);
@@ -43,7 +43,7 @@ namespace Scheduler.Service.Api.Controllers
             return !ModelState.IsValid ? Response(ModelState) : Response(await _appointmentAppService.Update(appointmentViewModel));
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             return Response(await _appointmentAppService.Delete(id));
